@@ -59,6 +59,7 @@ func (s *HTTPServer) SetNotFoundHandler(handler http.HandlerFunc) {
 // Запускает HTTP-сервер.
 func (s *HTTPServer) Start() error {
 	fmt.Printf("Starting HTTP server on port %s...\n", s.port)
+	fmt.Printf("Link: http://localhost:%s\n", s.port)
 	return s.server.ListenAndServe()
 }
 
