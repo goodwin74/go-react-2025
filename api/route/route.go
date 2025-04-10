@@ -1,7 +1,7 @@
 package route
 
 import (
-	app "goreact2025/api/controllers"
+	"goreact2025/api/controllers/app"
 	"goreact2025/internal/httpserver"
 	"goreact2025/internal/response"
 	"net/http"
@@ -24,6 +24,7 @@ func notFoundHandler(w http.ResponseWriter, r *http.Request) {
 func InitRoutes(s *httpserver.HTTPServer) {
 	s.AddReactRouter()
 	s.AddRoute("/api/start", app.GetStart)
+	s.AddRoute("/api/about", aboutHandler)
 	s.AddRoute("/api/error", errorHandler)
 
 	// Добавляем обработчик для неизвестных маршрутов
