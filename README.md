@@ -57,7 +57,7 @@ Syntax\
 Add to file route/route.go in function **InitRoutes**
 `s.AddRoute("/api/path", handler)`
 
-Handler from Controllers (e.g. from "app" (/controllers/app.go))
+Handler from Controllers (e.g. from "app" (/controllers/app/app.go))
 `s.AddRoute("/api/start", app.GetStart)`
 
 Handler func
